@@ -1,20 +1,37 @@
 package src;
 
 /**
- * @author Jamilu_Salisu_CST_19_SWE_00409
+ * @author Jamilusalism
  */
 
+//Tesing Class
 class FahrenheitToCelsius {
-    double celsius = 0.0;
-    void fahToCelsius (double fahrenheit) {
-        //celsius = (5/9) * (fahrenheit - 32);
-        celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);
+    public static void main(String[] args) {
+        //creating an object
+        FahrenheitToCelsiusLab3 fahr_to_cels = new FahrenheitToCelsiusLab3();
         
-        System.out.println(fahrenheit + " degree Fahrenheit is equivalent to " + celsius + " in Celsius");
+        fahr_to_cels.setFarh(4);
+        fahr_to_cels.fahToCelsius() ;
     }
-    
-    public static void main (String [] agrs) {
-        FahrenheitToCelsius fahToCal = new FahrenheitToCelsius();
-        fahToCal.fahToCelsius(50.0);
-    }
-}
+}// end FahrenheitToCelsiusDemo class
+
+
+class FahrenheitToCelsiusLab3 {
+    float cels = 0, fahr = 0;
+	
+    public void setFarh(float fahr) {
+        this.fahr = fahr;
+    } //end method setFarh
+        
+    public float getFarh() {
+        return fahr;
+    } //end method getFarh
+	
+    public void fahToCelsius() {
+        cels =(( 5 *(getFarh() - 32)) / 9);
+        //cels = (5/9) * (fahr - 32);
+        
+        System.out.println(fahr + " degree Fahrenheit is equivalent to " + cels + " in Celsius");
+    } //end method printTemperature
+	
+}//end FahrenheitToCelsius class

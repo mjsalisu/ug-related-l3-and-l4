@@ -1,7 +1,7 @@
 package src;
 
 /**
- * @author Jamilu_Salisu_CST_19_SWE_00409
+ * @author Jamilusalism
  */
 
 class SumTriangularMatrices {
