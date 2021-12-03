@@ -6,13 +6,15 @@ package src;
 
 class FahrenheitToCelsius {
     double celsius = 0.0;
-    
-    double fahToCelsius (double fahrenheit) {
-        return celsius = (5/9) * (fahrenheit - 32);
+    void fahToCelsius (double fahrenheit) {
+        //celsius = (5/9) * (fahrenheit - 32);
+        celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);
+        
+        System.out.println(fahrenheit + " degree Fahrenheit is equivalent to " + celsius + " in Celsius");
     }
     
     public static void main (String [] agrs) {
         FahrenheitToCelsius fahToCal = new FahrenheitToCelsius();
-        System.out.println("The Temperature in Celsius is: " + fahToCal.fahToCelsius(50.0));
+        fahToCal.fahToCelsius(50.0);
     }
 }
