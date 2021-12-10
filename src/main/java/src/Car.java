@@ -4,31 +4,39 @@ package src;
  * @author Jamilusalism
  */
 
-class CarDemo {
-    public static void main (String [] agrs) {
-        Car first_car = new Car();
-        Car second_car = new Car();
-        Car third_car = new Car();
-        
-        first_car.speedUp(180);
-        first_car.ravelledTimeUp(4);
+class CarDemo{
+    public static void main(String[] args) {
+        Car motor1 = new Car();
+        Car motor2 = new Car();
+        Car motor3 = new Car();
+        motor1.speedUp(30);
+        motor1.travelledTimeUp(12);
+        motor1.printStateTank();
+        motor2.speedUp(40);
+        motor2.travelledTimeUp(15);
+        motor2.printStateTank();
+        motor3.speedUp(50);
+        motor3.travelledTimeUp(20);
+        motor3.printStateTank();
     }
 }
 
 class Car {
-    int horsePower = 0;
-    int speed = 0;
-    int fuelConsumption = 0;
-    int gasTank = 0;
-    int travelledTime = 0;
+    int horsePower;
+    int speed;
+    int fuelConsumption;
+    int gasTank;
+    int travelledTimeUp;
         
     //contructor
     Car() {
-        //horsePower (hp);
+        //horsePower (hp)
+        horsePower = 50;
         speed = 0;
-        //fuelConsumption (km/liter);
-        gasTank = 8;
-        travelledTime = 0;
+        //fuelConsumption (km/liter)
+        fuelConsumption = 20;
+        gasTank = 200;
+        travelledTimeUp = 0;
     }
     
     //methods
@@ -40,13 +48,12 @@ class Car {
         speed -= decrement;
     }
     
-    void ravelledTimeUp(int hour) {
-        travelledTime = hour;
+    void travelledTimeUp(int increment) {
+        travelledTimeUp += increment;
     }
     
-    void printStateTank () {
-        //speed, fuelConsumption, travelledTime and initial value of the gasTank
-        System.out.println();
-    }
+    void printStateTank(){
+       System.out.println(gasTank - speed * travelledTimeUp / fuelConsumption);
+   }
     
 }//end class Car
