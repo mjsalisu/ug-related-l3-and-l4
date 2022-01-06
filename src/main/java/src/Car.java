@@ -1,10 +1,10 @@
 package src;
 
 /**
- * @author Jamilusalism
+ * @author @Jamilusalism & @hauwajibrilibrahim
  */
 
-class CarDemo{
+class CarDemo {
     public static void main(String[] args) {
         Car motor1 = new Car();
         Car motor2 = new Car();
@@ -27,33 +27,33 @@ class Car {
     int fuelConsumption;
     int gasTank;
     int travelledTimeUp;
-        
-    //contructor
+
+    // contructor
     Car() {
-        //horsePower (hp)
+        // horsePower (hp)
         horsePower = 50;
         speed = 0;
-        //fuelConsumption (km/liter)
+        // fuelConsumption (km/liter)
         fuelConsumption = 20;
         gasTank = 200;
         travelledTimeUp = 0;
     }
-    
-    //methods
+
+    // methods
     void speedUp(int increment) {
-       speed += increment;
+        speed += increment;
     }
-    
+
     void applyBrakes(int decrement) {
         speed -= decrement;
     }
-    
+
     void travelledTimeUp(int increment) {
         travelledTimeUp += increment;
     }
-    
-    void printStateTank(){
-       System.out.println(gasTank - speed * travelledTimeUp / fuelConsumption);
-   }
-    
-}//end class Car
+
+    void printStateTank() {
+        System.out.println(gasTank - speed * travelledTimeUp / fuelConsumption);
+    }
+
+}// end class Car
