@@ -1,0 +1,4 @@
+wordSeen: 216 	 wordSeenCount: 0
+wordSeen: 216 	 wordSeenCount: 0
+wordSeen: 216 	 wordSeenCount: 0
+wordSeen: 216 	 wordSeenCount: 0
